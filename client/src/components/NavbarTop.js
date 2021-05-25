@@ -1,9 +1,35 @@
+import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { useHistory,useLocation } from 'react-router-dom';
+import { Provider, useDispatch } from 'react-redux';
+import {createStore, combineReducers} from 'redux';
+import authReducer from './reducers/auth';
+
+
+const NavWrapper = () => {
+  const store = createStore(authReducer);
+
+  return (
+    <Provider store={store}>
+      <NavbarTop />
+    </Provider>
+  )
+}
 
 const NavbarTop = () => {
-  const user = null;
   const history = useHistory();
+  const [user, setUser ] = useState(JSON.parse(localStorage.getItem('profile')));
+  const dispatch = useDispatch();
+  const location = useLocation();
+  const logout = () => {
+    dispatch({ type: 'LOGOUT' });
+    history.push('/');
+    setUser(null);
+  }
+  useEffect(() => {
+    const token = user?.token;
+    setUser(JSON.parse(localStorage.getItem('profile')));
+  }, [location]);
 
   return (
     <>
@@ -28,7 +54,7 @@ const NavbarTop = () => {
            <li className="nav-item">
             <a className="nav-link">Hi, {user.result.name} </a>
            </li>
-           <button class="btn btn-sm btn-outline-secondary" type="button">Logout</button>
+           <button class="btn btn-sm btn-outline-secondary" type="button" onClick={logout}>Logout</button>
            </ >
         ) : (
           <button onClick={() => history.push('/auth')} class="btn btn-sm btn-outline-success" type="button">Sign In</button>
@@ -42,4 +68,4 @@ const NavbarTop = () => {
   )
 }
 
-export default NavbarTop
+export default NavWrapper

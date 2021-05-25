@@ -1,3 +1,4 @@
+import { red } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
@@ -24,9 +25,10 @@ export default makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
-    backgroundColor: 'green',
+    backgroundColor: '#b84242',
   },
   googleButton: {
     marginBottom: theme.spacing(2),
+    backgroundColor: '#4378b5',
   },
 }));
