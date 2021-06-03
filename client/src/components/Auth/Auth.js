@@ -6,7 +6,7 @@ import { Provider, useDispatch } from 'react-redux';
 import {createStore, combineReducers} from 'redux';
 import { useHistory } from 'react-router-dom';
 import authReducer from '../reducers/auth'
-import { signup, signin } from '.././actions/auth';
+import { signup, signin } from '../../actions/auth';
 import useStyles from './Styles';
 import Input from './Input';
 import Icon from './Icon';
