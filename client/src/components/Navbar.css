@@ -1,0 +1,8 @@
+.menu_active{
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+.item_margin{
+    margin-left: 50px;
+}

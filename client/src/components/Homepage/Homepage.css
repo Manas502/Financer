@@ -1,0 +1,37 @@
+.brand-name{
+    color: #4762e6;
+}
+
+.row{
+    justify-content: center;
+    align-items: center;
+}
+
+#Bitcoin{
+    animation: coin 10s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#Lowe-man{
+    animation: man 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+@keyframes coin {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes man{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(20deg);
+    }
+}

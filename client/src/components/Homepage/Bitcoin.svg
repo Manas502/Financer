@@ -1,31 +1,4 @@
-import { useState, useEffect } from 'react';
-import './Homepage.css';
-import photo from './Bitcoin.svg';
-
-function Home() {
-
-  return(
-    <>
-      <section id="header" className="mt-5 align-tems-center">
-        <div className="conatiner-fluid nav_bg">
-          <div className="row">
-            <div className="col-10 mx-auto">
-              <div className="row">
-              <div className="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1">
-                <h1>
-                  Welcome to <strong className="brand-name">Finance₹</strong>
-                </h1>
-                <h4 className="mt-3">
-                  Your aid to personal finance.
-                </h4>
-                <div className="mt-3">
-                  <a href="" className="btn btn-primary">
-                    Get Started
-                  </a>
-                  </div>
-                </div>
-                <div className="col-lg-6 order-lg-2">
-                <svg width="682" height="730" viewBox="0 0 682 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="682" height="730" viewBox="0 0 682 730" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="682" height="730" fill="#E5E5E5" fill-opacity="0.22"/>
 <g id="undraw_bitcoin2_ave7 1" clip-path="url(#clip0)">
 <path id="Vector" d="M671.79 470.52C626.24 653.2 441.2 764.39 258.48 718.83C75.76 673.27 -35.36 488.22 10.22 305.52C55.8 122.82 240.79 11.62 423.45 57.17C606.11 102.72 717.34 287.79 671.79 470.52Z" fill="#F7931A"/>
@@ -255,16 +228,3 @@ function Home() {
 </clipPath>
 </defs>
 </svg>
-  {/* <img src={photo} itemID="Bitcoin Lowe-man" alt="bitcoin image"/> */}
-
-                </div>
-              </div> 
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
-
-export default Home;
