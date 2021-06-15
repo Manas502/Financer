@@ -37,7 +37,7 @@ const NavbarTop = () => {
     <>
      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
-    <NavLink className="navbar-brand" to="/home">FINAN$E</NavLink>
+    <NavLink className="navbar-brand" to="/home">FINANSE₹</NavLink>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -48,6 +48,9 @@ const NavbarTop = () => {
         </li>
         <li className="nav-item">
           <NavLink activeClassName= 'menu_active' className="nav-link item_margin" to="/crypto">Crypto</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink activeClassName= 'menu_active' className="nav-link item_margin" to="/videos">Videos</NavLink>
         </li>
       </ul>
       <ul className="navbar-nav">

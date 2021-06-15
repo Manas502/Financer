@@ -19,8 +19,11 @@ function Home() {
                   Your aid to personal finance.
                 </h4>
                 <div className="mt-3">
-                  <a href="" className="btn btn-primary">
-                    Get Started
+                  {/* <NavLink to="/crypto" className="btn btn-primary">
+                    Browse
+                  </NavLink> */}
+                  <a href="/crypto" className="btn btn-primary">
+                    Browse
                   </a>
                   </div>
                 </div>
