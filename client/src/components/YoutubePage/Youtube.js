@@ -62,7 +62,7 @@ class Youtube extends React.Component{
                         <div>
                         <VideoDetail video={this.state.selectedVideo}/>
                     </div>
-                    <div>
+                    <div className="input-group">
                         <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos}/>
                     </div>
                     </div>

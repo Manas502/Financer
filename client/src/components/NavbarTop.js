@@ -52,6 +52,9 @@ const NavbarTop = () => {
         <li className="nav-item">
           <NavLink activeClassName= 'menu_active' className="nav-link item_margin" to="/videos">Videos</NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink activeClassName= 'menu_active' className="nav-link item_margin" to="/news">News</NavLink>
+        </li>
       </ul>
       <ul className="navbar-nav">
         {user ? (
@@ -59,10 +62,10 @@ const NavbarTop = () => {
            <li className="nav-item">
             <NavLink className="nav-link item_margin" to="/home">Hi, {user.result.name} </NavLink>
            </li>
-           <button class="btn btn-sm btn-outline-secondary item_margin" type="button" onClick={logout}>Logout</button>
+           <button className="btn btn-sm btn-outline-secondary item_margin" type="button" onClick={logout}>Logout</button>
            </ >
         ) : (
-          <button onClick={() => history.push('/auth')} class="btn btn-sm btn-outline-success item_margin" type="button">Sign In</button>
+          <button onClick={() => history.push('/auth')} className="btn btn-sm btn-outline-success item_margin" type="button">Sign In</button>
         )}
        
       </ul>
