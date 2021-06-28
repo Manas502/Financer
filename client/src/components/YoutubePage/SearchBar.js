@@ -24,7 +24,7 @@ class Searchbar extends React.Component{
     <form onSubmit={this.handleSubmit} className="form-control">
         <div className="field">
           <label className="form-label" htmlFor="video-search">Search</label>
-          <input onChange={this.handleChange} name="video-search" type="text" value={this.state.term} />
+          <input className="text-field" onChange={this.handleChange} name="video-search" type="text" value={this.state.term} />
         </div>
         <button className="btn btn-primary">Fetch videos</button>
     </form>

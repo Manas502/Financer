@@ -1,10 +1,11 @@
 
 import React from "react";
+import NewsArticle from "./NewsArticle";
+
+
 import NewsContextProvider from './NewsContext';
 import News from "./News";
 import "./News.css";
-
-// import NewsArticle from "./NewsArticle";
 function NewsRender() {
   return (
     <NewsContextProvider>
@@ -14,4 +15,4 @@ function NewsRender() {
   );
 }
 
-export default NewsRender;
+export default NewsRender

@@ -4,7 +4,7 @@ import '../../api/youtube'
 
 const VideoDetail=({video, handleVideoSelect}) => {
     if(!video){
-        return <div>Search for more videos</div>
+        return <div><br />Search for more videos</div>
     }
 
     
@@ -14,11 +14,11 @@ const VideoDetail=({video, handleVideoSelect}) => {
         return(
             <div>
                 <div className="video-item">
-                    <iframe title="video player" src={videosrc}/>
+                    <iframe className="selected-video" width="560" height="315" title="video player" src={videosrc}/>
                 </div>
                 <div className="video-item item">
-                    <h4 className="ui header">{video.snippet.title}</h4>
-                    <p>{video.snippet.description}</p>
+                    <h4 className="selected-video-title">{video.snippet.title}</h4>
+                    <p className="selected-video-desc">DESCRIPTION : <br />{video.snippet.description}</p>
                 </div>
             </div>
         )

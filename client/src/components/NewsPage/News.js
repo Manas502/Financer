@@ -3,7 +3,7 @@ import { NewsContext } from './NewsContext'
 import NewsArticle from './NewsArticle'
 import './News.css'
 function News(props) {
-    const data = useContext(NewsContext);
+    const data= useContext(NewsContext);
 
     return (
         <div className="all_news">

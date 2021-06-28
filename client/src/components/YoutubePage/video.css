@@ -2,12 +2,60 @@
     display: flex !important;
     align-items: center !important;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-right: 20px;
+    margin-left: 50px;
+    
 }
 
-.video-item.item img {
+
+.selected-video{
+    margin-left: 100px;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.selected-video-title{
+    color: brown;
+    max-width: 700px;
+    box-shadow: 10px 10px black;
+}
+
+.selected-video-desc{
+    margin-top: 0px;
+    border: 2px solid grey;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.video-item.item img{
     max-width: 200px;
     max-height: 250px ;
     margin-right: 20px;
+    
 }
+
+
+.header{
+   
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: blue;
+    text-transform: uppercase;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+/* .youtube-logo{
+    height: 50px;
+    width: 50px;
+    background: url("https://img.icons8.com/doodle/48/fa314a/youtube-play--v2.png");
+    margin: auto;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+} */
+

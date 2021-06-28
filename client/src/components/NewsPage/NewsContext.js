@@ -7,20 +7,23 @@ dotenv.config();
 export const NewsContext = createContext();
 
 const NewsContextProvider = (props) => {
-    const [data, setData] = useState("");
-    const apiKey = process.env.REACT_APP_NewsAPI;
+    const [data, setData] = useState();
+    const apiKey = process.env.REACT_APP_MEDIASTACK;
     useEffect(() => {
-        axios.get(`https://newsapi.org/v2/everything?q=keyword&apiKey=${apiKey}`)
+        // axios.get(`http://newsapi.org/v2/everything?q=rich&from=2020-07-19&sortBy=publishedAt&apiKey=${apiKey}`)
+       axios.get(`http://api.mediastack.com/v1/news
+       ? access_key = ${apiKey}
+       & keywords = bitcoin`)
         .then((response) => setData(response.data))
         .catch((err) => {
             if (err.response) {
               console.log(err.response.data);
-              this.setState({ error: err.response.data.message });
+              
             }
           });
     }, [])
     return (
-        <NewsContext.Provider props={data}>
+        <NewsContext.Provider props={{ data }}>
             {props.children}
         </NewsContext.Provider>
     );

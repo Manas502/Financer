@@ -37,14 +37,14 @@ const NavbarTop = () => {
     <>
      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
-    <NavLink className="navbar-brand" to="/home">FINANSE₹</NavLink>
+    <NavLink className="navbar-brand" to="/">FINANSE₹</NavLink>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <NavLink activeClassName= 'menu_active' className="ml-auto nav-link item_margin" aria-current="page" to="/home">Home</NavLink>
+          <NavLink activeClassName= 'menu_active' className="ml-auto nav-link home" aria-current="page" to="/home">Home</NavLink>
         </li>
         <li className="nav-item">
           <NavLink activeClassName= 'menu_active' className="nav-link item_margin" to="/crypto">Crypto</NavLink>
@@ -52,20 +52,20 @@ const NavbarTop = () => {
         <li className="nav-item">
           <NavLink activeClassName= 'menu_active' className="nav-link item_margin" to="/videos">Videos</NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink activeClassName= 'menu_active' className="nav-link item_margin" to="/news">News</NavLink>
-        </li>
+        {/* <li className="nav-item">
+          <NavLink activeClassName= 'menu_active' className="nav-link item_margin" to="/news">Contact</NavLink>
+        </li> */}
       </ul>
       <ul className="navbar-nav">
         {user ? (
           <>
            <li className="nav-item">
-            <NavLink className="nav-link item_margin" to="/home">Hi, {user.result.name} </NavLink>
+            <NavLink className="nav-link auth" to="/home">Hi, {user.result.name} </NavLink>
            </li>
-           <button className="btn btn-sm btn-outline-secondary item_margin" type="button" onClick={logout}>Logout</button>
+           <button className="btn btn-sm btn-outline-secondary auth" type="button" onClick={logout}>Logout</button>
            </ >
         ) : (
-          <button onClick={() => history.push('/auth')} className="btn btn-sm btn-outline-success item_margin" type="button">Sign In</button>
+          <button onClick={() => history.push('/auth')} className="btn btn-sm btn-outline-success auth" type="button">Sign In</button>
         )}
        
       </ul>

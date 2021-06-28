@@ -16,3 +16,4 @@ function NewsArticle({ data }) {
 }
 
 export default NewsArticle
+

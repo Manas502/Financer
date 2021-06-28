@@ -68,6 +68,12 @@
     align-items: center;
     margin-top: 64px;
     color: black;
+    background-image: url("./undraw_lightbulb_moment_re_ulyo.svg");
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-position-x: right;
+    background-position-y: -1%;
+    background-size: 28%;
   }
 
   .coin-search {
@@ -117,4 +123,8 @@
   
   .green {
     color: #11d811;
+  }
+
+  .svg{
+    justify-content: right;
   }

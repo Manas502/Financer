@@ -4,31 +4,7 @@ import SearchBar from './SearchBar'
 import youtube from '../../api/youtube'
 import VideoDetail from './VideoDetail'
 import VideoList from './VideoList'
-
-// function Youtube() {
-//     const API = ''
-//     const channelID = ''
-//     const result = 15;
-
-//     var finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelID}&part=snippet,id&order=data&maxResults=${result}`;
-
-//     return (
-//     <div>
-//         <SearchBar />
-//         {/* <button className="btn btn-primary">Fetch more videos</button> */}
-//         <div className="main-video">
-//           <iframe width="560" height="315" 
-//           src="https://www.youtube.com/embed/8NgVGnX4KOw" 
-//           title="YouTube video player" 
-//           frameborder="0" 
-//           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-//           allowfullscreen></iframe>
-//         </div>
-//     </div>
-//     )
-// }
-
-// export default Youtube
+import Particles from 'react-particles-js';
 
 class Youtube extends React.Component{
     state = {
@@ -52,11 +28,11 @@ class Youtube extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="main-body">
                 <SearchBar handleFormSubmit={this.handleSubmit} />
                 <div className="ui grid">
                     <div className="main-video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/8NgVGnX4KOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe className="frame" width="650" height="400" src="https://www.youtube.com/embed/8NgVGnX4KOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                     <div>
                         <div>
@@ -67,7 +43,7 @@ class Youtube extends React.Component{
                     </div>
                     </div>
                 </div>
-            </div>
+                </div>
         )
     }
 

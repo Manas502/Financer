@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './Homepage.css';
 import photo from './Bitcoin.svg';
+import Typed from 'react-typed';
+import ParticleBackground from '../ParticleBackground/ParticleBackground';
 
 function Home() {
 
@@ -12,11 +14,25 @@ function Home() {
             <div className="col-10 mx-auto">
               <div className="row">
               <div className="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1">
+              <ParticleBackground />
                 <h1>
                   Welcome to <strong className="brand-name">Finance₹</strong>
                 </h1>
                 <h4 className="mt-3">
-                  Your aid to personal finance.
+                <Typed
+                            strings={[
+                                'Your aid to personal finance.',
+                                'Watch cryptocurrency prices.',
+                                'See the market trends.',
+                                'Search for your favorite cryptocurrency.',
+                                'Watch Videos about cryptocurrencies.',
+                                'All in one place :)'
+                            ]}
+                            typeSpeed={50}
+                            backSpeed={100}
+                            loop
+                        >
+                        </Typed>
                 </h4>
                 <div className="mt-3">
                   {/* <NavLink to="/crypto" className="btn btn-primary">
