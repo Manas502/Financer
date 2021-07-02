@@ -20,6 +20,14 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 
 app.use('/user', userRouter)
 
+if(process.env.NODE_ENV == "production"){
+  app.use(express.static("client/build"));
+  const path = require("path");
+  app.get("*", (req,res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  })
+}
+
 
 const PORT = process.env.PORT|| 5000;
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
